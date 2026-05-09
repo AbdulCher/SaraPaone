@@ -1,17 +1,26 @@
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import Home from './pages/Home'
-import './App.css'
+import Biographie from './pages/Biographie'
+import Photos from './pages/Photos'
+import Videos from './pages/Videos'
 
-function App() {
-  
 
+
+
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <Home />
-      </section>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/biographie" element={<Biographie />} />
+        <Route path="/photo" element={<Photos />} />
+        <Route path="/video" element={<Videos />} />
+
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   )
 }
-
-export default App
