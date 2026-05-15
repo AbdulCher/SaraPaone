@@ -18,7 +18,7 @@ export default function Home() {
     backgroundPosition: '70% center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    paddingTop: '80px',
+    paddingTop: '100px',
   }}
 >
           <div className="absolute inset-0 flex flex-col justify-start pt-32 pl-12 md:pl-44">
@@ -39,7 +39,7 @@ export default function Home() {
               WebkitFontSmoothing: 'antialiased'
             }} className="ml-4 md:ml-16">Paone</span>  
             <span style={{ fontFamily: 'Corinthia, serif', fontSize: 'clamp(30px, 5vw, 60px)', color: '#bea0a4' }} className="mt-8">alto-mezzosoprano</span>
-            <span style={{ fontFamily: 'Corinthia, serif', fontSize: 'clamp(30px, 5vw, 60px)', color: '#bea0a4' }} className="mt-2 ml-4 md:ml-8">artiste aérienne</span>      
+            <span style={{ fontFamily: 'Corinthia, serif', fontSize: 'clamp(30px, 5vw, 60px)', color: '#bea0a4' }} className="ml-4 md:ml-8">artiste aérienne</span>      
           </div>
         </div>
 

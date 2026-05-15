@@ -7,8 +7,8 @@ export default function Biographie() {
 
       {/* Hero titre */}
       <div className="pt-40 pb-16 text-center px-8">
-        <p className="text-sm tracking-[0.4em] uppercase text-gray-400 mb-4">Soprano — Artiste aérienne</p>
-        <h1 className="font-aref text-4xl md:text-6xl font-bold text-[#bea0a4]">Biographie</h1>
+        <p className="text-sm tracking-[0.4em] uppercase text-gray-400 mb-4">Sara Paone — Artiste aérienne</p>
+        <h1 className="font-aref text-4xl md:text-4xl font-bold text-[#bea0a4]">Biographie</h1>
         <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
       </div>
 

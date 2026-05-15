@@ -41,10 +41,13 @@ export default function Photos() {
   }
 
   return (
-    <div className="bg-[#121615] text-black pt-32 px-6 md:px-24 pb-20">
+    <div className="bg-[#121615] text-black px-6 md:px-24 pb-20">
 
-      <h1 className="flex justify-center text-4xl md:text-5xl text-[#bea0a4] font-bold mb-12">Photos</h1>
-
+<div className="pt-40 pb-16 text-center px-8">
+        <p className="text-sm tracking-[0.4em] uppercase text-gray-400 mb-4">Sara Paone — Artiste aérienne</p>
+        <h1 className="font-aref text-4xl md:text-4xl font-bold text-[#bea0a4]">Photos</h1>
+        <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
+      </div>
       {/* Onglets */}
       <div className="flex justify-center gap-8 md:gap-12 mb-12 border-b border-gray-700">
         <button
