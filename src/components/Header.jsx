@@ -1,4 +1,4 @@
-import logo from '../assets/bale.jpg'
+
 import NavLinks from './NavLinks'
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 
@@ -11,8 +11,7 @@ export default function Header() {
         paddingRight: '2rem' 
       }}>
   
-        <img src={logo} alt="Logo" className="h-14 w-auto object-contain" />
-
+<img src="/bale.JPG" alt="Logo" className="h-14 w-auto object-contain" />
         <nav className="flex justify-center px-4">
             <NavLinks className="gap-3" linkClassName="text-2xl px-2" />
         </nav>
