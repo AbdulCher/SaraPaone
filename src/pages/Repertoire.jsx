@@ -91,28 +91,40 @@ const repertoire = [
 
 export default function Repertoire() {
   return (
-    <div className="bg-white text-black pt-32 pb-20">
-      <div className="max-w-5xl mx-auto px-8">
-        
-        <h1 className="font-aref text-5xl font-bold mb-16">Répertoire</h1>
+    <div className="bg-[#121615] text-black pb-20">
 
-        <div className="grid grid-cols-3 gap-x-16 gap-y-12">
-          {repertoire.map((groupe) => (
-            <div key={groupe.compositeur}>
-              <p className="text-red-600 text-lg font-semibold mb-3 uppercase tracking-wide">
-                {groupe.compositeur}
-              </p>
-              {groupe.oeuvres.map((oeuvre, index) => (
-                <div key={index} className="mb-3">
-                  <p className="text-gray-500 text-base">{oeuvre.titre}</p>
-                  <p className="text-gray-900 text-base font-medium">{oeuvre.personnage}</p>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-
+      {/* Hero titre */}
+      <div className="pt-40 pb-16 text-center px-8">
+        <p className="text-sm tracking-[0.4em] uppercase text-gray-400 mb-4">Sara Paone — Mezzo-soprano</p>
+        <h1 className="font-aref text-4xl font-bold text-[#bea0a4]">Répertoire</h1>
+        <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
       </div>
+
+      {/* Grille répertoire */}
+      
+      <div className="max-w-6xl mx-auto px-8">
+  {repertoire.map((groupe, index) => (
+    <div
+      key={groupe.compositeur}
+      className={`mb-10 ${
+        index % 3 === 0 ? 'text-left' :
+        index % 3 === 1 ? 'text-center' :
+        'text-right'
+      }`}
+    >
+      <p className="text-red-600 text-lg font-semibold mb-2 uppercase tracking-wide">
+        {groupe.compositeur}
+      </p>
+      {groupe.oeuvres.map((oeuvre, i) => (
+        <div key={i}>
+          <p className="text-gray-400 text-base">{oeuvre.titre}</p>
+          <p className="text-gray-200 text-base font-medium">{oeuvre.personnage}</p>
+        </div>
+      ))}
+    </div>
+  ))}
+</div>
+
     </div>
   )
 }
