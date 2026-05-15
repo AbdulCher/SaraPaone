@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 export default function Footer() {
   return (
-<footer className="bg-black text-white w-screen min-h-[67vh] py-12 flex flex-col items-center justify-center gap-10">
+<footer className="bg-[#0b0f0d] text-white w-screen min-h-[67vh] py-12 flex flex-col items-center justify-center gap-10">
       <nav>
         <NavLinks className="gap-6 text-lg flex-wrap justify-center" />
       </nav>

@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-screen bg-black text-2xl text-white z-50">
+    <header className="fixed top-0 left-0 w-screen bg-[#0b0f0d] text-2xl text-gray-300 z-50">
       <div className="grid items-center py-3" style={{ 
         gridTemplateColumns: 'auto 1fr auto',
         paddingLeft: '2rem', 

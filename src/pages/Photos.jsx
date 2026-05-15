@@ -44,10 +44,10 @@ export default function Photos() {
   }
 
   return (
-    <div className="bg-white text-black pt-32 px-24 pb-20">
-        <h1 className="text-5xl font-bold mb-12">Photos</h1>
+    <div className="bg-[#121615] text-black pt-32 px-24 pb-20">
+        <h1 className="flex justify-center text-5xl text-[#bea0a4] font-bold mb-12">Photos</h1>
       {/* Onglets */}
-      <div className="flex gap-12 mb-12 border-b border-gray-200">
+      <div className="flex justify-center gap-12 mb-12 border-b border-gray-200">
         <button
           onClick={() => setActiveTab('onstage')}
           className={`pb-4 text-xl tracking-wide transition-colors duration-200 ${
