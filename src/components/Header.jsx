@@ -1,4 +1,4 @@
-import logo from '../assets/bale.JPG'
+import logo from '../assets/bale.jpg'
 import NavLinks from './NavLinks'
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 
