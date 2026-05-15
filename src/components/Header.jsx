@@ -9,9 +9,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-screen bg-[#0b0f0d] text-gray-300 z-50">
       
       {/* Barre principale */}
-      <div className="grid items-center py-3 px-8" style={{ 
-        gridTemplateColumns: 'auto 1fr auto',
-      }}>
+      <div className="flex items-center justify-between py-3 px-8">
   
         <img src="/bale.JPG" alt="Logo" className="h-14 w-auto object-contain" />
 
