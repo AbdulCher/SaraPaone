@@ -1,5 +1,3 @@
-import cabaret from '../assets/cabaret.jpg'
-import ombre from '../assets/ombre.jpg'
 import pariscirque from '../assets/pariscirque.jpg'
 import secretlife from '../assets/secretlife.jpg'
 
@@ -7,15 +5,15 @@ export default function Biographie() {
   return (
     <div className="bg-[#121615] text-black">
 
-      {/* Hero titre #EDE8E3*/}
-      <div className="pt-40 pb-16 text-center">
+      {/* Hero titre */}
+      <div className="pt-40 pb-16 text-center px-8">
         <p className="text-sm tracking-[0.4em] uppercase text-gray-400 mb-4">Soprano — Artiste aérienne</p>
-        <h1 className="font-aref text-6xl font-bold text-[#bea0a4]">Biographie</h1>
+        <h1 className="font-aref text-4xl md:text-6xl font-bold text-[#bea0a4]">Biographie</h1>
         <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
       </div>
 
       {/* Section 1 — intro + image */}
-      <section className="max-w-6xl mx-auto px-8 flex items-start gap-20 pb-20">
+      <section className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-start gap-12 md:gap-20 pb-20">
         
         <div className="flex-1 flex flex-col gap-6 text-lg leading-relaxed text-gray-500 pt-4">
           <p className="text-xl text-gray-500 font-medium leading-relaxed">
@@ -32,7 +30,7 @@ export default function Biographie() {
           </p>
         </div>
 
-        <div className="w-80 shrink-0">
+        <div className="w-full md:w-80 shrink-0">
           <img src={pariscirque} alt="Sara Paone" className="w-full h-auto object-cover" />
         </div>
 
@@ -41,7 +39,7 @@ export default function Biographie() {
       {/* Citation */}
       <section style={{ backgroundColor: '#0b0f0d' }} className="py-16 px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xl italic text-gray-400 leading-relaxed">
+          <p className="text-lg md:text-xl italic text-gray-400 leading-relaxed">
             « Sa voix au teint sombre et généreux, se déploie dans un répertoire qui peut aller du Baroque aux Opéras Contemporains en passant par les œuvres du XIXe. Ses capacités interprétatives lui confèrent une présence scénique très remarquable. »
           </p>
         </div>
@@ -58,8 +56,8 @@ export default function Biographie() {
       <section style={{ backgroundColor: '#121615' }} className="py-20">
         <div className="max-w-6xl mx-auto px-8">
 
-          <div className="flex items-start gap-20 mb-12">
-            <div className="w-72 shrink-0">
+          <div className="flex flex-col md:flex-row items-start gap-12 md:gap-20 mb-12">
+            <div className="w-full md:w-72 shrink-0">
               <img src={secretlife} alt="Sara Paone" className="w-full h-auto object-cover" />
             </div>
             <div className="flex-1 flex flex-col gap-6 text-lg leading-relaxed text-gray-500">
