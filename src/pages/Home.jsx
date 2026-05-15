@@ -12,15 +12,15 @@ export default function Home() {
 
         {/* Hero */}
         <div
-          className="w-full h-screen relative"
-          style={{ 
-            backgroundImage: `url('${cover}')`,
-            backgroundPosition: 'center center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            paddingTop: '80px',
-          }}
-        >
+  className="w-full h-screen relative"
+  style={{ 
+    backgroundImage: `url('${cover}')`,
+    backgroundPosition: '70% center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    paddingTop: '80px',
+  }}
+>
           <div className="absolute inset-0 flex flex-col justify-start pt-32 pl-12 md:pl-44">
             <span style={{ 
               fontFamily: 'Corinthia',
