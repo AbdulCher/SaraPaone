@@ -29,6 +29,7 @@ export default function Home() {
 
         {/* Hero */}
         <div
+<<<<<<< HEAD
           className="w-full h-screen relative"
           style={{ 
             backgroundImage: `url('${cover}')`,
@@ -85,6 +86,36 @@ export default function Home() {
               <span style={{ fontFamily: 'EB Garamond, serif', fontSize: 'clamp(20px, 3vw, 32px)', color: '#bea0a4', lineHeight: '0.8', fontWeight: '300', fontStyle: 'italic', letterSpacing: '0.15em' }} className="ml-4 md:ml-8">artiste aérienne</span>
               </motion.div>
 
+=======
+  className="w-full h-screen relative"
+  style={{ 
+    backgroundImage: `url('${cover}')`,
+    backgroundPosition: '70% center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    paddingTop: '100px',
+  }}
+>
+          <div className="absolute inset-0 flex flex-col justify-start pt-32 pl-12 md:pl-44">
+            <span style={{ 
+              fontFamily: 'Corinthia',
+              fontSize: 'clamp(60px, 10vw, 120px)',
+              lineHeight: '92px',
+              color: '#bea0a4',
+              fontWeight: '300',
+              WebkitFontSmoothing: 'antialiased'
+            }}>Sara</span>          
+            <span style={{ 
+              fontFamily: 'Corinthia',
+              fontSize: 'clamp(60px, 10vw, 120px)',
+              lineHeight: '92px',
+              color: '#bea0a4',
+              fontWeight: '300',
+              WebkitFontSmoothing: 'antialiased'
+            }} className="ml-4 md:ml-16">Paone</span>  
+            <span style={{ fontFamily: 'Corinthia, serif', fontSize: 'clamp(30px, 5vw, 60px)', color: '#bea0a4' }} className="mt-8">alto-mezzosoprano</span>
+            <span style={{ fontFamily: 'Corinthia, serif', fontSize: 'clamp(30px, 5vw, 60px)', color: '#bea0a4' }} className="ml-4 md:ml-8">artiste aérienne</span>      
+>>>>>>> e72d60f0765b341261f47fd47bdcc933d82804dc
           </div>
         </div>
               
