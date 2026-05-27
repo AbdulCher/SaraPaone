@@ -47,7 +47,7 @@ export default function Home() {
       viewport={{ once: false, amount: 0.3 }}
       style={{ 
         fontFamily: 'Corinthia',
-        fontSize: 'clamp(60px, 14vw, 180px)',
+        fontSize: 'clamp(80px, 18vw, 180px)',
         fontStyle: 'italic',
         lineHeight: '0.9',
         color: '#bea0a4',
@@ -64,7 +64,7 @@ export default function Home() {
       viewport={{ once: false, amount: 0.3 }}
       style={{ 
         fontFamily: 'Corinthia',
-        fontSize: 'clamp(60px, 14vw, 180px)',
+        fontSize: 'clamp(80px, 18vw, 180px)',
         fontStyle: 'italic',
         lineHeight: '0.9',
         color: '#bea0a4',
