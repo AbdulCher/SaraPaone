@@ -5,7 +5,7 @@ export default function Footer() {
   return (
 <footer className="bg-[#0b0f0d] text-white w-screen min-h-[67vh] py-12 flex flex-col items-center justify-center gap-10">
       <nav>
-        <NavLinks className="gap-6 text-lg flex-wrap justify-center" />
+        <NavLinks className="gap-6 text-sm flex-wrap justify-center" />
       </nav>
 
       <div className="flex items-center gap-6">

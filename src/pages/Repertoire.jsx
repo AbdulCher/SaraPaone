@@ -1,10 +1,5 @@
 const repertoire = [
-  {
-    compositeur: 'Monteverdi',
-    oeuvres: [
-      { titre: "L'incoronazione di Poppea", personnage: 'Ottavia' },
-    ]
-  },
+
   {
     compositeur: 'Haendel',
     oeuvres: [
@@ -15,9 +10,12 @@ const repertoire = [
     ]
   },
   {
-    compositeur: 'Purcell',
+    compositeur: 'Verdi',
     oeuvres: [
-      { titre: 'Dido and Aeneas', personnage: 'Dido, sorceress' },
+      { titre: 'Traviata', personnage: 'Flora' },
+      { titre: 'Rigoletto', personnage: 'Maddalena' },
+      { titre: 'Aida', personnage: 'Amneris' },
+      { titre: 'Un Ballo in Maschera', personnage: 'Ulrica' },
     ]
   },
   {
@@ -27,18 +25,6 @@ const repertoire = [
       { titre: 'Il Tabarro', personnage: 'La Frugola' },
       { titre: 'Suor Angelica', personnage: 'Zia Principessa' },
       { titre: 'Madama Butterfly', personnage: 'Suzuki' },
-    ]
-  },
-  {
-    compositeur: 'Donizetti',
-    oeuvres: [
-      { titre: 'Lucrezia Borgia', personnage: 'Maffio Orsini' },
-    ]
-  },
-  {
-    compositeur: 'Baraldi',
-    oeuvres: [
-      { titre: 'La Principessa Le Thi', personnage: 'Ngoq' },
     ]
   },
   {
@@ -55,24 +41,15 @@ const repertoire = [
     ]
   },
   {
-    compositeur: 'Verdi',
+    compositeur: 'Purcell',
     oeuvres: [
-      { titre: 'Traviata', personnage: 'Flora' },
-      { titre: 'Rigoletto', personnage: 'Maddalena' },
-      { titre: 'Aida', personnage: 'Amneris' },
-      { titre: 'Un Ballo in Maschera', personnage: 'Ulrica' },
+      { titre: 'Dido and Aeneas', personnage: 'Dido, sorceress' },
     ]
   },
   {
-    compositeur: 'Mascagni',
+    compositeur: 'Monteverdi',
     oeuvres: [
-      { titre: 'Cavalleria Rusticana', personnage: 'Mamma Lucia' },
-    ]
-  },
-  {
-    compositeur: 'Menotti',
-    oeuvres: [
-      { titre: 'The Medium', personnage: 'Baba' },
+      { titre: "L'incoronazione di Poppea", personnage: 'Ottavia' },
     ]
   },
   {
@@ -82,11 +59,35 @@ const repertoire = [
     ]
   },
   {
+    compositeur: 'Donizetti',
+    oeuvres: [
+      { titre: 'Lucrezia Borgia', personnage: 'Maffio Orsini' },
+    ]
+  },
+  {
+    compositeur: 'Menotti',
+    oeuvres: [
+      { titre: 'The Medium', personnage: 'Baba' },
+    ]
+  },
+  {
     compositeur: 'Bacalov',
     oeuvres: [
       { titre: 'Borges Quenta Que', personnage: 'La Negra' },
     ]
   },
+  {
+    compositeur: 'Baraldi',
+    oeuvres: [
+      { titre: 'La Principessa Le Thi', personnage: 'Ngoq' },
+    ]
+  },
+  {
+    compositeur: 'Mascagni',
+    oeuvres: [
+      { titre: 'Cavalleria Rusticana', personnage: 'Mamma Lucia' },
+    ]
+  }, 
 ]
 
 export default function Repertoire() {
@@ -95,35 +96,29 @@ export default function Repertoire() {
 
       {/* Hero titre */}
       <div className="pt-40 pb-16 text-center px-8">
-        <p className="text-sm tracking-[0.4em] uppercase text-gray-400 mb-4">Sara Paone — Mezzo-soprano</p>
-        <h1 className="font-aref text-4xl font-bold text-[#bea0a4]">Répertoire</h1>
+        <p className="text-sm tracking-[0.4em] uppercase text-gray-400 mb-4">Sara Paone — Répertoire</p>
         <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
       </div>
 
       {/* Grille répertoire */}
       
-      <div className="max-w-6xl mx-auto px-8">
-  {repertoire.map((groupe, index) => (
-    <div
-      key={groupe.compositeur}
-      className={`mb-10 ${
-        index % 3 === 0 ? 'text-left' :
-        index % 3 === 1 ? 'text-center' :
-        'text-right'
-      }`}
-    >
-      <p className="text-red-600 text-lg font-semibold mb-2 uppercase tracking-wide">
-        {groupe.compositeur}
-      </p>
-      {groupe.oeuvres.map((oeuvre, i) => (
-        <div key={i}>
-          <p className="text-gray-400 text-base">{oeuvre.titre}</p>
-          <p className="text-gray-200 text-base font-medium">{oeuvre.personnage}</p>
+      <div className="flex justify-center mx-auto px-8">
+      <div className="grid grid-cols-3 gap-x-90 gap-y-28">    
+        {repertoire.map((groupe, index) => (
+            <div key={groupe.compositeur}>
+              <p style={{fontStyle:'italic'}} className="text-red-600 text-lg font-semibold mb-1 uppercase tracking-wide">
+                {groupe.compositeur}
+              </p>
+              {groupe.oeuvres.map((oeuvre, i) => (
+                <div key={i} className="mb-1">
+                  <p className="text-gray-400 text-base">{oeuvre.titre}</p>
+                  <p className="text-gray-200 text-base font-medium">{oeuvre.personnage}</p>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  ))}
-</div>
+      </div>
 
     </div>
   )

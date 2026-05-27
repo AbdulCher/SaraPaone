@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Aref+Ruqaa+Ink&family=Corinthia&family=Lora:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import "tailwindcss";
+
 
 
 *, *::before, *::after {
@@ -14,7 +16,10 @@ body {
   margin: 0;
   padding: 0;
 }
-
+body {
+  font-family: 'EB Garamond', serif;
+  font-style: normal;
+}
 #root {
   width: 100%;
   max-width: 100%;
@@ -47,4 +52,17 @@ body {
     --border: #2e303a;
     --accent: #c084fc;
   }
+}
+
+@keyframes scroll-gallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.gallery-scroll {
+  animation: scroll-gallery 12s linear infinite;
+}
+
+.gallery-scroll:hover {
+  animation-play-state: paused;
 }
