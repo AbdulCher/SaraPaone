@@ -119,8 +119,8 @@ export default function Bio() {
       </section>
 
       {/* Projets hybrides */}
-      <motion.section {...fadeUp} className="max-w-7xl mx-auto px-8 py-20">
-        <h3 style={{ fontStyle: 'italic' }} className="text-3xl text-[#bea0a4] mb-8">
+      <motion.section {...fadeUp} className="max-w-4xl mx-auto px-8 py-20">
+        <h3 style={{ fontStyle: 'italic' }} className="flex justify-center text-3xl text-[#bea0a4] mb-8">
           Projets hybrides, collaborations hétéroclites et sociales
         </h3>
         <p className="text-2xl leading-relaxed text-gray-200 mb-6">
