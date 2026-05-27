@@ -151,7 +151,7 @@ useEffect(() => {
         {/* Section Vidéos */}
         <section id="videos" className="scroll-mt-28 mb-16">
         <p className="flex justify-center text-xs tracking-[0.4em] uppercase text-gray-500 mb-6">Vidéos</p>
-          <div className="hidden md:flex gap-8 items-stretch min-h-[600px]">
+          <div className="hidden md:flex gap-8 items-stretch min-height-[600px]">
             <div className="flex-1 flex flex-col justify-start">
               <VideoCard id={videos[0].id} title={videos[0].title} />
             </div>

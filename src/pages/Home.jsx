@@ -12,11 +12,11 @@ export default function Home() {
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent(prev => (prev + 1) % photos.length)
-    }, 4000)
-    return () => clearInterval(timer)
-  }, [])
+  const timer = setInterval(() => {
+    setCurrent(prev => (prev + 1) % photos.length)
+  }, 4000)
+  return () => clearInterval(timer)
+}, [photos.length])
 
   const prev = (current - 1 + photos.length) % photos.length
   const next = (current + 1) % photos.length
@@ -111,7 +111,7 @@ export default function Home() {
             viewport={{ once: false, amount: 0.3 }}
             className="w-full md:flex-1"
           >
-            <img src={portrait} alt="Sara Paone" className="w-full h-auto object-cover max-h-[700px]" />
+            <img src={portrait} alt="Sara Paone" className="w-full h-auto object-cover max-height-[700px]" />
           </motion.div>
 
           <motion.div
