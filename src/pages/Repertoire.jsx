@@ -101,18 +101,17 @@ export default function Repertoire() {
       </div>
 
       {/* Grille répertoire */}
-      
-      <div className="flex justify-center mx-auto px-8">
-      <div className="grid grid-cols-3 gap-x-90 gap-y-28">    
-        {repertoire.map((groupe, index) => (
-            <div key={groupe.compositeur}>
-              <p style={{fontStyle:'italic'}} className="text-red-600 text-lg font-semibold mb-1 uppercase tracking-wide">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+          {repertoire.map((groupe) => (
+            <div key={groupe.compositeur} className="text-center">
+              <p style={{ fontStyle: 'italic' }} className="text-red-600 text-xl sm:text-lg font-semibold mb-2 uppercase tracking-wide">
                 {groupe.compositeur}
               </p>
               {groupe.oeuvres.map((oeuvre, i) => (
-                <div key={i} className="mb-1">
-                  <p className="text-gray-400 text-base">{oeuvre.titre}</p>
-                  <p className="text-gray-200 text-base font-medium">{oeuvre.personnage}</p>
+                <div key={i} className="mb-2">
+                  <p className="text-gray-400 text-lg sm:text-base">{oeuvre.titre}</p>
+                  <p className="text-gray-200 text-lg sm:text-base font-medium">{oeuvre.personnage}</p>
                 </div>
               ))}
             </div>
