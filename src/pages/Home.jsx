@@ -38,52 +38,57 @@ export default function Home() {
         >
           <div className="absolute inset-0 flex flex-col justify-start pt-32 pl-12 md:pl-44">
 
-            <motion.span
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              viewport={{ once: false, amount: 0.3 }}
-              style={{ 
-                fontFamily: 'Corinthia',
-                fontSize: 'clamp(200px, 14vw, 180px)',
-                fontStyle: 'italic',
-                lineHeight: '100px',
-                color: '#bea0a4',
-                fontWeight: '300',
-                WebkitFontSmoothing: 'antialiased'
-              }}
-              className='mb-6'
-            >Sara</motion.span>          
+  {/* Groupe Sara Paone sans espace */}
+  <div className="flex flex-col" style={{ gap: '0px' }}>
+    <motion.span
+      initial={{ opacity: 0, x: -40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, delay: 0.3 }}
+      viewport={{ once: false, amount: 0.3 }}
+      style={{ 
+        fontFamily: 'Corinthia',
+        fontSize: 'clamp(60px, 14vw, 180px)',
+        fontStyle: 'italic',
+        lineHeight: '0.9',
+        color: '#bea0a4',
+        fontWeight: '300',
+        WebkitFontSmoothing: 'antialiased',
+        display: 'block'
+      }}
+    >Sara</motion.span>          
 
-            <motion.span
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              viewport={{ once: false, amount: 0.3 }}
-              style={{ 
-                fontFamily: 'Corinthia',
-                fontSize: 'clamp(200px, 14vw, 180px)',
-                fontStyle: 'italic',
-                lineHeight: '100px',
-                color: '#bea0a4',
-                fontWeight: '300',
-                WebkitFontSmoothing: 'antialiased'
-              }}
-              className="ml-4 md:ml-16"
-            >Paone</motion.span>
+    <motion.span
+      initial={{ opacity: 0, x: -40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, delay: 0.6 }}
+      viewport={{ once: false, amount: 0.3 }}
+      style={{ 
+        fontFamily: 'Corinthia',
+        fontSize: 'clamp(60px, 14vw, 180px)',
+        fontStyle: 'italic',
+        lineHeight: '0.9',
+        color: '#bea0a4',
+        fontWeight: '300',
+        WebkitFontSmoothing: 'antialiased',
+        display: 'block'
+      }}
+      className="ml-4 md:ml-16"
+    >Paone</motion.span>
+  </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.2, delay: 1.2 }}
-              className="flex flex-col mt-46"
-              style={{ gap: '-14px' }}
-            >
-              <span style={{ fontFamily: 'EB Garamond, serif', fontSize: 'clamp(20px, 3vw, 32px)', color: '#bea0a4', lineHeight: '0.8', fontWeight: '300', fontStyle: 'italic', letterSpacing: '0.15em' }}>alto-mezzosoprano</span>
-              <span style={{ fontFamily: 'EB Garamond, serif', fontSize: 'clamp(20px, 3vw, 32px)', color: '#bea0a4', lineHeight: '0.8', fontWeight: '300', fontStyle: 'italic', letterSpacing: '0.15em' }} className="ml-4 md:ml-8">artiste aérienne</span>
-            </motion.div>
+  {/* Groupe alto-mezzosoprano */}
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1.2, delay: 1.2 }}
+    className="flex flex-col mt-46"
+    style={{ gap: '-14px' }}
+  >
+    <span style={{ fontFamily: 'EB Garamond, serif', fontSize: 'clamp(20px, 3vw, 32px)', color: '#bea0a4', lineHeight: '0.8', fontWeight: '300', fontStyle: 'italic', letterSpacing: '0.15em' }}>alto-mezzosoprano</span>
+    <span style={{ fontFamily: 'EB Garamond, serif', fontSize: 'clamp(20px, 3vw, 32px)', color: '#bea0a4', lineHeight: '0.8', fontWeight: '300', fontStyle: 'italic', letterSpacing: '0.15em' }} className="ml-4 md:ml-8">artiste aérienne</span>
+  </motion.div>
 
-          </div>
+</div>
         </div>
 
         <motion.p
@@ -134,58 +139,72 @@ export default function Home() {
         </div>
 
         {/* Section Photos */}
-        <section className="py-16 max-w-6xl mx-auto px-8 w-full">
-          <div className="flex items-center justify-center gap-6">
+<section className="py-16 max-w-6xl mx-auto px-8 w-full">
+  <div className="flex items-center justify-center gap-3 md:gap-6">
 
-            <div
-              className="w-40 h-56 overflow-hidden cursor-pointer shrink-0 opacity-30 hover:opacity-50 transition-all duration-700 scale-95 hover:scale-100"
-              onClick={() => setCurrent(prev)}
-            >
-              <img src={photos[prev]} alt="prev" className="w-full h-full object-cover blur-[2px]" />
-            </div>
+    {/* Photo gauche - cachée sur mobile */}
+    <div
+      className="hidden md:block w-40 h-56 overflow-hidden cursor-pointer shrink-0 opacity-30 hover:opacity-50 transition-all duration-700 scale-95 hover:scale-100"
+      onClick={() => setCurrent(prev)}
+    >
+      <img src={photos[prev]} alt="prev" className="w-full h-full object-cover blur-[2px]" />
+    </div>
 
-            <div className="flex-1 max-w-xl h-96 overflow-hidden relative rounded-sm">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={current}
-                  src={photos[current]}
-                  alt={`Photo ${current + 1}`}
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.7, ease: 'easeInOut' }}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              </AnimatePresence>
-            </div>
+    {/* Photo centrale */}
+    <div className="w-full md:flex-1 md:max-w-xl h-64 md:h-96 overflow-hidden relative rounded-sm">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={current}
+          src={photos[current]}
+          alt={`Photo ${current + 1}`}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.7, ease: 'easeInOut' }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </AnimatePresence>
+    </div>
 
-            <div
-              className="w-40 h-56 overflow-hidden cursor-pointer shrink-0 opacity-30 hover:opacity-50 transition-all duration-700 scale-95 hover:scale-100"
-              onClick={() => setCurrent(next)}
-            >
-              <img src={photos[next]} alt="next" className="w-full h-full object-cover blur-[2px]" />
-            </div>
+    {/* Photo droite - cachée sur mobile */}
+    <div
+      className="hidden md:block w-40 h-56 overflow-hidden cursor-pointer shrink-0 opacity-30 hover:opacity-50 transition-all duration-700 scale-95 hover:scale-100"
+      onClick={() => setCurrent(next)}
+    >
+      <img src={photos[next]} alt="next" className="w-full h-full object-cover blur-[2px]" />
+    </div>
 
-          </div>
+  </div>
 
-          <div className="flex justify-center gap-2 mt-16">
-            {photos.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrent(index)}
-                className={`transition-all duration-500 rounded-full ${
-                  current === index ? 'w-8 h-1 bg-[#bea0a4]' : 'w-1 h-1 bg-gray-600 hover:bg-gray-400'
-                }`}
-              />
-            ))}
-          </div>
+  {/* Indicateurs */}
+  <div className="flex justify-center gap-2 mt-8 md:mt-16">
+    {photos.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrent(index)}
+        className={`transition-all duration-500 rounded-full ${
+          current === index ? 'w-8 h-1 bg-[#bea0a4]' : 'w-1 h-1 bg-gray-600 hover:bg-gray-400'
+        }`}
+      />
+    ))}
+  </div>
 
-          <div className="flex justify-center mt-8">
-            <Link to="/photo" className="inline-block px-8 py-3 border border-gray-600 text-gray-300 text-sm tracking-wide hover:bg-white hover:text-black transition-colors duration-200">
-              Visiter la galerie photo
-            </Link>
-          </div>
-        </section>
+  {/* Sur mobile, flèches de navigation */}
+  <div className="flex md:hidden justify-between px-4 mt-4">
+    <button onClick={() => setCurrent(prev)} className="text-gray-400 hover:text-[#bea0a4] transition-colors text-2xl">
+      ←
+    </button>
+    <button onClick={() => setCurrent(next)} className="text-gray-400 hover:text-[#bea0a4] transition-colors text-2xl">
+      →
+    </button>
+  </div>
+
+  <div className="flex justify-center mt-8">
+    <Link to="/photo" className="inline-block px-8 py-3 border border-gray-600 text-gray-300 text-sm tracking-wide hover:bg-white hover:text-black transition-colors duration-200">
+      Visiter la galerie photo
+    </Link>
+  </div>
+</section>
 
       </div>
     </>
