@@ -27,13 +27,13 @@ export default function Home() {
 
         {/* Hero */}
         <div
-          className="w-full h-screen relative"
+          className="flex w-full h-screen relative"
           style={{ 
             backgroundImage: `url('${cover}')`,
-            backgroundPosition: '70% center',
+            backgroundPosition: '70% 0%',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            paddingTop: '100px',
+            paddingTop: '300px',
           }}
         >
           <div className="absolute inset-0 flex flex-col justify-start pt-32 pl-12 md:pl-44">
@@ -47,7 +47,7 @@ export default function Home() {
       viewport={{ once: false, amount: 0.3 }}
       style={{ 
         fontFamily: 'Corinthia',
-        fontSize: 'clamp(80px, 18vw, 180px)',
+        fontSize: 'clamp(80px, 18vw, 200px)',
         fontStyle: 'italic',
         lineHeight: '0.9',
         color: '#bea0a4',
@@ -64,9 +64,9 @@ export default function Home() {
       viewport={{ once: false, amount: 0.3 }}
       style={{ 
         fontFamily: 'Corinthia',
-        fontSize: 'clamp(80px, 18vw, 180px)',
+        fontSize: 'clamp(80px, 18vw, 200px)',
         fontStyle: 'italic',
-        lineHeight: '0.9',
+        lineHeight: '0.4',
         color: '#bea0a4',
         fontWeight: '300',
         WebkitFontSmoothing: 'antialiased',
@@ -95,11 +95,11 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="flex justify-center text-sm tracking-[0.4em] uppercase text-gray-400 mt-10 mb-4"
+          className="flex justify-center text-xl tracking-[0.4em] uppercase text-[#bea0a4] mt-10 mb-4"
         >
           Sara Paone
         </motion.p>
-        <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
+        <div className="w-16 h-px bg-gray-300 mx-auto mt-8" />
 
         {/* Section présentation */}
         <section className="flex flex-col md:flex-row items-center gap-12 py-16 max-w-6xl mx-auto px-8">
@@ -126,9 +126,11 @@ export default function Home() {
               Sa grande capacité d'interprétation théâtrale et sa passion du mouvement l'ont amenée à se produire dans les arts du cirque.
               Son parcours tout à fait singulier, son chant et sa manière d'habiter la scène, en font une artiste rare.
             </p>
-            <Link to="/biographie" className="inline-block w-fit mt-4 px-6 py-3 bg-black text-white text-sm tracking-wide hover:bg-gray-800 transition-colors duration-200">
-              En savoir plus
-            </Link>
+            <div className="flex justify-center mt-4 border border-gray-600 w-max mx-auto">
+              <Link to="/biographie" className="px-6 py-3 bg-black text-white text-lg tracking-wide hover:bg-[#bea0a4] hover:text-black transition-colors duration-200">
+                En savoir plus
+              </Link>
+            </div>
           </motion.div>
 
         </section>
@@ -200,7 +202,7 @@ export default function Home() {
   </div>
 
   <div className="flex justify-center mt-8">
-    <Link to="/photo" className="inline-block px-8 py-3 border border-gray-600 text-gray-300 text-sm tracking-wide hover:bg-white hover:text-black transition-colors duration-200">
+    <Link to="/photo" className="inline-block px-8 py-3 border border-gray-600 text-gray-300 text-lg tracking-wide hover:bg-[#bea0a4] hover:text-black transition-colors duration-200">
       Visiter la galerie photo
     </Link>
   </div>

@@ -1,3 +1,5 @@
+import cremona from '../assets/cremona.jpg'
+
 const repertoire = [
 
   {
@@ -92,33 +94,47 @@ const repertoire = [
 
 export default function Repertoire() {
   return (
-    <div className="bg-[#121615] text-black pb-20">
+    <div
+      className="text-black pb-20 relative"
+      style={{
+        backgroundImage: `url(${cremona})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Overlay sombre */}
+      <div className="absolute inset-0 bg-black/80" />
 
-      {/* Hero titre */}
-      <div className="pt-40 pb-16 text-center px-8">
-        <p className="text-sm tracking-[0.4em] uppercase text-gray-400 mb-4">Sara Paone — Répertoire</p>
-        <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
-      </div>
+      {/* Contenu au dessus de l'overlay */}
+      <div className="relative z-10">
 
-      {/* Grille répertoire */}
-      <div className="max-w-6xl mx-auto px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
-          {repertoire.map((groupe) => (
-            <div key={groupe.compositeur} className="text-center">
-              <p style={{ fontStyle: 'italic' }} className="text-red-600 text-xl sm:text-lg font-semibold mb-2 uppercase tracking-wide">
-                {groupe.compositeur}
-              </p>
-              {groupe.oeuvres.map((oeuvre, i) => (
-                <div key={i} className="mb-2">
-                  <p className="text-gray-400 text-lg sm:text-base">{oeuvre.titre}</p>
-                  <p className="text-gray-200 text-lg sm:text-base font-medium">{oeuvre.personnage}</p>
-                </div>
-              ))}
-            </div>
-          ))}
+        {/* Hero titre */}
+        <div className="pt-40 pb-16 text-center px-8">
+          <p className="text-xl tracking-[0.4em] uppercase text-[#bea0a4] mb-4">Répertoire</p>
+          <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
         </div>
-      </div>
 
+        {/* Grille répertoire */}
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+            {repertoire.map((groupe) => (
+              <div key={groupe.compositeur} className="text-center">
+                <p style={{ fontFamily: 'EB Garamond', fontStyle: 'italic' }} className="text-[#bea0a4] text-4xl sm:text-xl font-semibold mb-2 uppercase tracking-[0.02em]">
+                  {groupe.compositeur}
+                </p>
+                {groupe.oeuvres.map((oeuvre, i) => (
+                  <div key={i} className="mb-2">
+                    <p className="text-gray-400 text-4xl sm:text-xl">{oeuvre.titre}</p>
+                    <p className="text-gray-200 text-4xl sm:text-xl font-medium">{oeuvre.personnage}</p>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
     </div>
   )
 }

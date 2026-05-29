@@ -105,10 +105,9 @@ useEffect(() => {
       <div className="bg-[#121615] px-6 md:px-24 pb-20">
 
         <div className="pt-40 pb-8 text-center">
-          <p className="text-sm tracking-[0.4em] uppercase text-gray-400 mb-6">Sara Paone — Galerie</p>
-        <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
-
-      </div>
+          <p className="text-xl tracking-[0.4em] uppercase text-[#bea0a4] mb-6">Galerie</p>
+          <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
+        </div>
 
       {/* Barre sticky */}
       <div className={`sticky top-20 z-40 py-4 flex justify-center gap-4 mb-16 transition-opacity duration-500 ${
