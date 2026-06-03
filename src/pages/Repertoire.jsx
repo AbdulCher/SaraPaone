@@ -117,7 +117,7 @@ export default function Repertoire() {
 
         {/* Grille répertoire */}
         <div className="px-6 md:px-12 lg:px-20 flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-52 gap-y-8 w-full pl-32">            {repertoire.map((groupe) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-52 gap-y-8 w-full pl-8">            {repertoire.map((groupe) => (
               <div key={groupe.compositeur} className="py-4 border-b border-gray-800/50 md:border-none">
                 <p style={{ fontFamily: 'EB Garamond' }} className="text-[#8A0000] text-2xl md:text-xl font-semibold mb-3 uppercase tracking-[0.02em]">
                   {groupe.compositeur}

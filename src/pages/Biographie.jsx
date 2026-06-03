@@ -62,7 +62,7 @@ export default function Biographie() {
 {/* Section 1 */}
       <section className="mx-auto px-8 flex flex-col lg:flex-row items-start gap-12 lg:gap-20 pt-16">
         <motion.div {...fadeRight} className="w-full lg:w-[55%] shrink-0">
-          <img src={piratesofpenzance} alt="Sara Paone" className="w-full h-auto lg:h-[600px] object-cover object-top" />
+          <img src={piratesofpenzance} alt="Sara Paone" className="w-full h-auto lg:height-[600px] object-cover object-top" />
         </motion.div>
         <div className="w-full lg:w-[45%] px-4 lg:px-8">
           <TextBlock delay={0.2}>
@@ -105,7 +105,7 @@ export default function Biographie() {
           </TextBlock>
         </div>
         <motion.div {...fadeRight} className="w-full lg:w-[35%] shrink-0">
-          <img src={pariscirque} alt="Sara Paone" className="w-full h-auto lg:h-[800px] object-cover object-center" />
+          <img src={pariscirque} alt="Sara Paone" className="w-full h-auto lg:height-[800px] object-cover object-center" />
         </motion.div>
       </section>
 
@@ -122,7 +122,7 @@ export default function Biographie() {
       {/* Projets hybrides */}
 <section className="mx-auto px-8 flex flex-col lg:flex-row items-start gap-12 lg:gap-20 pt-16">
   <motion.div {...fadeRight} className="w-full lg:w-[50%] shrink-0">
-    <img src={bruxellespeeping} alt="Sara Paone" className="w-full h-auto lg:h-[500px] object-cover object-top" />
+    <img src={bruxellespeeping} alt="Sara Paone" className="w-full h-auto lg:height-[500px] object-cover object-top" />
   </motion.div>
   <div className="flex-1 px-4 lg:px-8">
     <SectionTitle>

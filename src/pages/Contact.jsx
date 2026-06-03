@@ -16,7 +16,7 @@ export default function Contact() {
 
         {/* Image mobile et tablette */}
         <div className="block lg:hidden w-full">
-          <img src={fiesolen} alt="Sara Paone" className="w-full h-[920px] object-cover" />
+          <img src={fiesolen} alt="Sara Paone" className="w-full height-[920px] object-cover" />
         </div>
 
         {/* Formulaire */}
@@ -56,7 +56,7 @@ export default function Contact() {
         </div>
 
         {/* Image desktop */}
-        <div className="hidden lg:block lg:w-2/4 shrink-0 h-[1200px] overflow-hidden pr-10">
+        <div className="hidden lg:block lg:w-2/4 shrink-0 height-[1200px] overflow-hidden pr-10">
           <img src={fiesolen} alt="Sara Paone" className="w-full h-full object-contain" />
         </div>
 
