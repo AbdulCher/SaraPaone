@@ -1,7 +1,6 @@
 import cremona from '../assets/cremona.jpg'
 
 const repertoire = [
-
   {
     compositeur: 'Haendel',
     oeuvres: [
@@ -98,35 +97,40 @@ export default function Repertoire() {
       className="text-black pb-20 relative"
       style={{
         backgroundImage: `url(${cremona})`,
-        backgroundSize: 'cover',
+        backgroundSize: '100% auto',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Overlay sombre */}
-      <div className="absolute inset-0 bg-black/80" />
+      <div className="absolute inset-0 bg-black/84" />
 
-      {/* Contenu au dessus de l'overlay */}
       <div className="relative z-10">
 
         {/* Hero titre */}
         <div className="pt-40 pb-16 text-center px-8">
-          <p className="text-xl tracking-[0.4em] uppercase text-[#bea0a4] mb-4">Répertoire</p>
-          <div className="w-16 h-px bg-gray-400 mx-auto mt-8" />
+          <h1 style={{ fontFamily: 'EB Garamond, serif', fontSize: 'clamp(24px, 4vw, 48px)', color: '#bea0a4', lineHeight: '1.2' }}>
+            Répertoire
+          </h1>
+          <div className="w-full h-px bg-gray-800 mt-4" />
         </div>
 
         {/* Grille répertoire */}
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
-            {repertoire.map((groupe) => (
-              <div key={groupe.compositeur} className="text-center">
-                <p style={{ fontFamily: 'EB Garamond', fontStyle: 'italic' }} className="text-[#bea0a4] text-4xl sm:text-xl font-semibold mb-2 uppercase tracking-[0.02em]">
+        <div className="px-6 md:px-12 lg:px-20 flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-52 gap-y-8 w-full pl-32">            {repertoire.map((groupe) => (
+              <div key={groupe.compositeur} className="py-4 border-b border-gray-800/50 md:border-none">
+                <p style={{ fontFamily: 'EB Garamond' }} className="text-[#8A0000] text-2xl md:text-xl font-semibold mb-3 uppercase tracking-[0.02em]">
                   {groupe.compositeur}
                 </p>
                 {groupe.oeuvres.map((oeuvre, i) => (
-                  <div key={i} className="mb-2">
-                    <p className="text-gray-400 text-4xl sm:text-xl">{oeuvre.titre}</p>
-                    <p className="text-gray-200 text-4xl sm:text-xl font-medium">{oeuvre.personnage}</p>
+                  <div key={i} className="mb-2 text-left">
+                    <p className="text-gray-200 text-xl md:text-lg">
+                      {oeuvre.personnage}
+                      <span className="text-[#bea0a4] mx-2">—</span>
+                      <span style={{ fontStyle: 'italic' }} className="text-gray-400">
+                        {oeuvre.titre}
+                      </span>
+                    </p>
                   </div>
                 ))}
               </div>
